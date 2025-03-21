@@ -1,0 +1,12 @@
+snippet tpl_pod "pod template" b
+apiVersion: v1
+kind: Pod
+metadata:
+	name: _name
+	labels:
+	  - _key: _value
+spec: 
+	containers:
+	  - name: _name
+		  image: _image
+endsnippet
