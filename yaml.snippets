@@ -10,3 +10,22 @@ spec:
 	  - name: _name
 		  image: _image
 endsnippet
+
+snippet tpl_ing "ingress template" b 
+apiVersion: networking.k8s.io/v1 
+kind: Ingress 
+metadata:
+	name: _name 
+spec: 
+	rules:
+		- host: "_hostname"
+			http:
+				paths: 
+					- path: / 
+						pathType: Prefix
+						backend: 
+							service: 
+								name: _service
+								port: 
+									number: _port
+endsnippet
